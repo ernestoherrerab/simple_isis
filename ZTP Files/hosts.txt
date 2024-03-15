@@ -34,3 +34,9 @@
 10.62.37.151      SWEx-CC7-core2.acme.com
 10.62.37.152      SWEx-CC8-core1.acme.com
 10.62.37.153      SWEx-CC8-core2.acme.com
+192.168.0.128     core1
+192.168.0.129     core2
+192.168.0.130     core3
+192.168.0.131     core4
+192.168.0.132     core5
+192.168.0.133     core6
