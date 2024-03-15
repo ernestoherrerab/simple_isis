@@ -1,0 +1,36 @@
+127.0.0.1       localhost
+127.0.1.1       automation.acme.com Automation
+
+10.62.37.235      netbox.acme.com
+10.62.37.240      automation.acme.com
+10.62.37.245      neo4j.acme.com 
+10.62.37.140      SWEx-dc07-sp01.acme.com
+10.62.37.141      SWEx-dc07-sp02.acme.com
+10.62.37.142      SWEx-dc07-le01a.acme.com
+10.62.37.143      SWEx-dc07-le01b.acme.com
+10.62.37.155      SWEx-dc07-le02a.acme.com
+10.62.37.156      SWEx-dc07-le02b.acme.com
+10.62.37.146      SWEx-dc07-le03a.acme.com
+10.62.37.147      SWEx-dc07-le03b.acme.com
+10.62.37.144      SWEx-dc07-bl01a.acme.com
+10.62.37.145      SWEx-dc07-bl01b.acme.com
+10.62.37.160      SWEx-dc08-sp01.acme.com
+10.62.37.161      SWEx-dc08-sp02.acme.com
+10.62.37.162      SWEx-dc08-le01a.acme.com
+10.62.37.163      SWEx-dc08-le01b.acme.com
+10.62.37.157      SWEx-dc08-le02a.acme.com
+10.62.37.158      SWEx-dc08-le02b.acme.com
+10.62.37.164      SWEx-dc08-bl01a.acme.com
+10.62.37.165      SWEx-dc08-bl01b.acme.com
+10.62.37.132      SWEx-dh02-sp01.acme.com
+10.62.37.133      SWEx-dh02-sp02.acme.com
+10.62.37.136      SWEx-dh02-bl01a.acme.com
+10.62.37.137      SWEx-dh02-bl01b.acme.com
+10.62.37.134      SWEx-dh02-le01a.acme.com
+10.62.37.135      SWEx-dh02-le01b.acme.com
+10.62.37.194      dc7-fw1.acme.com
+10.62.37.196      dc8-fw1.acme.com
+10.62.37.150      SWEx-CC7-core1.acme.com
+10.62.37.151      SWEx-CC7-core2.acme.com
+10.62.37.152      SWEx-CC8-core1.acme.com
+10.62.37.153      SWEx-CC8-core2.acme.com

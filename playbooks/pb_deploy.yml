@@ -1,25 +1,11 @@
 ---
 
-  - hosts: isis_fabric
+  - hosts: dc01
     gather_facts: false
     tasks:
       - name: Generate Device Intended Config and Documention
         import_role:
-           name: arista.avd.eos_cli_config_gen
-
-  - name: Configuration deployment with CVP
-    hosts: cv_server
-    connection: local
-    gather_facts: false
-    collections:
-      - arista.avd
-      - arista.cvp
-    tasks:
-      - name: run CVP provisioning
-        import_role:
-          name: arista.avd.eos_config_deploy_cvp
-        vars:
-          container_root: 'isis_fabric'
-          configlets_prefix: 'acme'
-          state: present
-          cv_collection: v3
+          name: arista.avd.eos_cli_config_gen
+      - name: Deploy Configurations to Device
+        import_role: 
+          name: arista.avd.eos_config_deploy_eapi

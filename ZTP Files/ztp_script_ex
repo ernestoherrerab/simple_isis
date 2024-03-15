@@ -1,0 +1,6 @@
+# Placed in /var/lib/tftpboot/swex-dh02-le01a 
+# #!/usr/bin/Cli -p2
+enable
+
+copy tftp://10.62.37.240/dh02-le01a-startup-config flash:startup-config
+

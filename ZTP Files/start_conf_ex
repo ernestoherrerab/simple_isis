@@ -1,0 +1,26 @@
+!Placed in  /var/lib/tftpboot/dh02-le01a-startup-config 
+service routing protocols model multi-agent
+!
+hostname swex-dh02-le01a
+!
+username admin privilege 15 role network-admin secret sha512 $6$VLw340tWMRM3.Eey$QMTzDzdgHfCkmr3ZPUgDw61McORLu2jOjtx8y5jgVRi4I6TZKJcM.G2hV09v2rPw.LlAt3QhXFcoLX33dPlX80
+!
+vrf instance MGMT
+!
+ip routing
+ip routing vrf MGMT
+!
+interface Management1
+   description oob_management
+   no shutdown
+   vrf MGMTcd ..
+   ip address 10.62.37.134/24
+!
+management api http-commands
+   protocol https
+   protocol http
+   no shutdown
+   !
+   vrf MGMT
+      no shutdown
+

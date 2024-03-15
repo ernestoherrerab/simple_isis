@@ -1,0 +1,198 @@
+subnet 10.62.37.0 netmask 255.255.255.0 {
+    range 10.62.37.10 10.62.37.80;
+    option routers 10.62.37.254;
+    option domain-name "ikea.com";
+    option domain-name-servers 10.62.37.240;
+
+    host swex-dh02-sp01 {
+    hardware ethernet 0c:4c:f0:bf:3e:00;
+    fixed-address 10.62.37.132;
+    option host-name "swex-dh02-sp01";
+    option bootfile-name "tftp://10.62.37.240/swex-dh02-sp01";
+    }
+    host swex-dh02-sp02 {
+    hardware ethernet 0c:4c:f0:ce:a1:00;
+    fixed-address 10.62.37.133;
+    option host-name "swex-dh02-sp02";
+    option bootfile-name "tftp://10.62.37.240/swex-dh02-sp02";
+    }
+    host swex-dh02-le01a {
+    hardware ethernet 0c:4c:f0:9b:23:00;
+    fixed-address 10.62.37.134;
+    option host-name "swex-dh02-le01a";
+    option bootfile-name "tftp://10.62.37.240/swex-dh02-le01a";
+    }
+    host swex-dh02-le01b {
+    hardware ethernet 0c:4c:f0:b1:85:00;
+    fixed-address 10.62.37.135;
+    option host-name "swex-dh02-le01b";
+    option bootfile-name "tftp://10.62.37.240/swex-dh02-le01b";
+    }
+    host swex-dh02-bl01a {
+    hardware ethernet 0c:4c:f0:2e:f4:00;
+    fixed-address 10.62.37.136;
+    option host-name "swex-dh02-bl01a";
+    option bootfile-name "tftp://10.62.37.240/swex-dh02-bl01a";
+    }
+    host swex-dh02-bl01b {
+    hardware ethernet 0c:4c:f0:0a:d9:00;
+    fixed-address 10.62.37.137;
+    option host-name "swex-dh02-bl01b";
+    option bootfile-name "tftp://10.62.37.240/swex-dh02-bl01b";
+    }
+    host swex-dc07-sp01 {
+    hardware ethernet 0c:4c:f0:62:2d:00;
+    fixed-address 10.62.37.140;
+    option host-name "swex-dc07-sp01";
+    option bootfile-name "tftp://10.62.37.240/swex-dc07-sp01";
+    }
+    host swex-dc07-sp02 {
+    hardware ethernet 0c:4c:f0:b1:f3:00;
+    fixed-address 10.62.37.141;
+    option host-name "swex-dc07-sp02";
+    option bootfile-name "tftp://10.62.37.240/swex-dc07-sp02";
+    }
+    host swex-dc07-le01a {
+    hardware ethernet 0c:4c:f0:5a:01:00;
+    fixed-address 10.62.37.142;
+    option host-name "swex-dc07-le01a";
+    option bootfile-name "tftp://10.62.37.240/swex-dc07-le01a";
+    }
+    host swex-dc07-le01b {
+    hardware ethernet 0c:4c:f0:0d:04:00;
+    fixed-address 10.62.37.143;
+    option host-name "swex-dc07-le01b";
+    option bootfile-name "tftp://10.62.37.240/swex-dc07-le01b";
+    }
+    host swex-dc07-le02a {
+    hardware ethernet 0c:4c:f0:a7:e0:00;
+    fixed-address 10.62.37.155;
+    option host-name "swex-dc07-le02a";
+    option bootfile-name "tftp://10.62.37.240/swex-dc07-le02a";
+    }
+    host swex-dc07-le02b {
+    hardware ethernet 0c:4c:f0:5c:ba:00;
+    fixed-address 10.62.37.156;
+    option host-name "swex-dc07-le02b";
+    option bootfile-name "tftp://10.62.37.240/swex-dc07-le02b";
+    }
+    host swex-dc07-le03a {
+    hardware ethernet 0c:4c:f0:a7:bf:00;
+    fixed-address 10.62.37.146;
+    option host-name "swex-dc07-bl01a";
+    option bootfile-name "tftp://10.62.37.240/swex-dc07-le03a";
+    }
+    host swex-dc07-le03b {
+    hardware ethernet 0c:4c:f0:39:39:00;
+    fixed-address 10.62.37.147;
+    option host-name "swex-dc07-bl01b";
+    option bootfile-name "tftp://10.62.37.240/swex-dc07-le03b";
+    }
+    host swex-dc07-bl01a {
+    hardware ethernet 0c:4c:f0:d6:06:00;
+    fixed-address 10.62.37.144;
+    option host-name "swex-dc07-bl01a";
+    option bootfile-name "tftp://10.62.37.240/swex-dc07-bl01a";
+    }
+    host swex-dc07-bl01b {
+    hardware ethernet 0c:4c:f0:c9:44:00;
+    fixed-address 10.62.37.145;
+    option host-name "swex-dc07-bl01b";
+    option bootfile-name "tftp://10.62.37.240/swex-dc07-bl01b";
+    }
+    host swex-dc08-sp01 {
+    hardware ethernet 0c:4c:f0:43:82:00;
+    fixed-address 10.62.37.160;
+    option host-name "swex-dc08-sp01";
+    option bootfile-name "tftp://10.62.37.240/swex-dc08-sp01";
+    }
+    host swex-dc08-sp02 {
+    hardware ethernet 0c:4c:f0:89:e2:00;
+    fixed-address 10.62.37.161;
+    option host-name "swex-dc08-sp02";
+    option bootfile-name "tftp://10.62.37.240/swex-dc08-sp02";
+    }
+    host swex-dc08-le01a {
+    hardware ethernet 0c:4c:f0:a9:63:00;
+    fixed-address 10.62.37.162;
+    option host-name "swex-dc08-le01a";
+    option bootfile-name "tftp://10.62.37.240/swex-dc08-le01a";
+    }
+    host swex-dc08-le01b {
+    hardware ethernet 0c:4c:f0:06:95:00;
+    fixed-address 10.62.37.163;
+    option host-name "swex-dc08-le01b";
+    option bootfile-name "tftp://10.62.37.240/swex-dc08-le01b";
+    }
+    host swex-dc08-le02a {
+    hardware ethernet 0c:4c:f0:14:f4:00;
+    fixed-address 10.62.37.157;
+    option host-name "swex-dc08-le02a";
+    option bootfile-name "tftp://10.62.37.240/swex-dc08-le02a";
+    }
+    host swex-dc08-le02b {
+    hardware ethernet 0c:4c:f0:fb:69:00;
+    fixed-address 10.62.37.158;
+    option host-name "swex-dc08-le02b";
+    option bootfile-name "tftp://10.62.37.240/swex-dc08-le02b";
+    }
+    host swex-dc08-bl01a {
+    hardware ethernet 0c:4c:f0:69:8e:00;
+    fixed-address 10.62.37.164;
+    option host-name "swex-dc08-bl01a";
+    option bootfile-name "tftp://10.62.37.240/swex-dc08-bl01a";
+    }
+    host swex-dc08-bl01b {
+    hardware ethernet 0c:4c:f0:94:6d:00;
+    fixed-address 10.62.37.165;
+    option host-name "swex-dc08-bl01b";
+    option bootfile-name "tftp://10.62.37.240/swex-dc08-bl01b";
+    }
+}
+
+subnet 192.168.0.0 netmask 255.255.255.0 {
+    range 192.168.0.10 192.168.0.248;
+    option routers 192.168.0.254;
+    option domain-name "acme.com";
+    option domain-name-servers 192.168.0.5;
+
+    host core1 {
+    hardware ethernet 0c:87:1d:4b:cb:00;
+    fixed-address 192.168.0.128;
+    option host-name "core1";
+    option bootfile-name "tftp://192.168.0.5/core1";
+    }
+    host core2 {
+        hardware ethernet 0c:87:1d:d8:43:00;
+        fixed-address 192.168.0.129;
+        option host-name "core2";
+        option bootfile-name "tftp://192.168.0.5/core2";
+    }
+    host core3 {
+        hardware ethernet 0c:87:1d:9d:df:00;
+        fixed-address 192.168.0.130;
+        option host-name "core3";
+        option bootfile-name "tftp://192.168.0.5/core3";
+    }
+    host core4 {
+        hardware ethernet 0c:87:1d:c0:70:00;
+        fixed-address 192.168.0.131;
+        option host-name "core4";
+        option bootfile-name "tftp://192.168.0.5/core4";
+    }
+    host core5 {
+        hardware ethernet 0c:87:1d:2a:6d:00;
+        fixed-address 192.168.0.132;
+        option host-name "core5";
+        option bootfile-name "tftp://192.168.0.5/core5";
+    }
+    host core6 {
+        hardware ethernet 0c:87:1d:35:00:00;
+        fixed-address 192.168.0.133;
+        option host-name "core6";
+        option bootfile-name "tftp://192.168.0.5/core6";
+    }
+}
+
+ddns-update-style none;
+log-facility local7;
