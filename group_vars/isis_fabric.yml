@@ -1,0 +1,94 @@
+### LOCAL USERS ###
+local_users:
+  arista:
+    privilege: 15
+    role: network-admin
+    sha512_password: $6$ZGX/X07MoiWP9hvX$3UaAtOAiBGc54DYHdQt5dsr5P2HLydxjrda51Zw69tSsF4tahXPVj26PwOiZUy/xFRZL3CAkT7.lsOPqWfIbU0
+  cvpadmin:
+    privilege: 15
+    role: network-admin
+    sha512_password: $6$VkEn9bBEs2QqmMw7$tp1RpJKwlxGZZYnUSSvDtT8Jnk23Liow9QzRXiU6yNBvEFU9097mhUb4DZboVDA3NYYIqbnGzUNpcaW2SRXKi/
+  ec2-user:
+    ssh_key: ssh-rsa ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCvYWlYxxAZixFYOneS39s6yr5sVyzwpS+XoL5LOdgp3iWaP3FJdSSoGYLZgwXnf3qIWj6aQ5CzADnVCUknEzAe5T4S1eGItqICzBVB2GPrHHIimnyADCSxtpMZkuq/8/tEvW10EZUscuOnsNaDHJaJgz6btmHfwgGM6yN5Phn6okZZjTdnV6A0i5jhxsyEkYycNHQvYWMNTWvzOeA5l584ogSKx1PBsCkoJAoACmAmCjM1hLSnjz3c+tRt2qrp2BzweqE66hoBo/iWVZAQqwcyIWyeuC5dHMZ+zp3imxJGwhkynAd/KF54owcWy/MfcmBzxRXXXt5ZUebdatuYyI/nXanPzesKZzxkijHJUaCtt+Fch6kGAR+TQHrCVEFwYjqFGAXD3VTcy4U20wUxQBPEelTfcvdcguWNdRyKMPJBkBQNYIUwPZJ1/Vujb3Wgj4UqVZMnUNVPnNA2j5QG8eIAGYF0y82Ab+dWHz6EEqCmgpKBu9IwG6TBxYj8WicwwnU= root@buildkitsandbox
+    shell: /bin/bash
+    no_password: True
+  service:
+    shell: /bin/bash
+    sha512_password: $6$4/zhWrt.4uoXazbw$ZIXvYDOa4agPgAfF/nl4KefeN0VMMZ5G/ZPvdp3QtJ0Reuo16diMgpPgk09/OXNfGJ9J1FAQUGCMVtQCbdpQy0
+
+# TERMINATTR DAEMON
+daemon_terminattr:
+  cvaddrs: [192.168.0.5:9910]
+  cvauth: 
+    method: token
+    token_file: /tmp/token
+  cvvrf: default
+  smashexcludes: ale,flexCounter,hardware,kni,pulse,strata
+  ingestexclude: /Sysdb/cell/1/agent,/Sysdb/cell/2/agent
+
+### MANAGEMENT INTERFACE ###
+mgmt_vrf_routing: false
+mgmt_interface_vrf: default
+
+### DNS ###
+dns_domain: acme.com
+name_servers: 
+  - 10.255.0.2
+domain_list:
+  - acme.com
+
+### LLDP ###
+lldp:
+  management_address: all
+  vrf: default
+  run: true
+
+### BANNER ###
+banners:
+  motd: |
+    #########################################################################################
+    #                                                                                      
+    #       Warning Notice                                                                 
+    #
+    #       This system is restricted solely to authorized users for legitimate business
+    #       purposes only. The actual or attempted unauthorized access, use, or modification
+    #       of this system is strictly prohibited.
+    #
+    #########################################################################################
+    EOF
+
+### GENERAL ###
+metadata:
+  platform: vEOS-LAB
+is_deployed: true
+service_routing_protocols_model: multi-agent
+ip_routing: true
+vlan_internal_order:
+  allocation: ascending
+  range:
+    beginning: 1006
+    ending: 1199
+management_api_http:
+  enable_vrfs:
+  - name: default
+  enable_https: true
+
+ntp:
+  local_interface:
+    name: Management1
+    vrf: default
+  servers:
+  - name: 0.pool.ntp.org
+    vrf: default
+    preferred: true
+  - name: 1.pool.ntp.org
+    vrf: default
+ip_igmp_snooping:
+  globally_enabled: true
+
+### STP ###
+spanning_tree:
+  mode: mstp
+  mst_instances:
+  - id: '0'
+    priority: 32768

@@ -1,0 +1,100 @@
+### HOSTNAME ###
+hostname: core1
+
+### MANAGEMENT INTERFACE ###
+management_interfaces:
+- name: Management1
+  description: oob_management
+  shutdown: false
+  vrf: default
+  ip_address: 192.168.0.128/24
+  gateway: null
+  type: oob
+
+### LOOPBACK INTERFACES ### 
+loopback_interfaces:
+- name: Loopback0
+  description: Router_ID
+  shutdown: false
+  ip_address: 1.1.1.1/32
+
+### ETHERNET INTERFACES
+ethernet_interfaces:
+- name: Ethernet1
+  type: routed
+  peer_type: l3_interface
+  shutdown: false
+- name: Ethernet2
+  type: routed
+  peer_type: l3_interface
+  shutdown: false
+- name: Ethernet3
+  type: routed
+  peer_type: l3_interface
+  shutdown: false
+- name: Ethernet1.3
+  peer_type: l3_interface
+  ip_address: 10.0.1.2/31
+  shutdown: false
+  description: LINK_TO_CORE2_ACME_DT
+  type: l3dot1q
+  encapsulation_dot1q_vlan: 3
+  vrf: ACME-DT
+- name: Ethernet2.3
+  peer_type: l3_interface
+  ip_address: 10.0.1.4/31
+  shutdown: false
+  description: LINK_TO_CORE3_ACME_DT
+  type: l3dot1q
+  encapsulation_dot1q_vlan: 3
+  vrf: ACME-DT
+- name: Ethernet3.3
+  peer_type: l3_interface
+  ip_address: 10.0.1.6/31
+  shutdown: false
+  description: LINK_TO_CORE4_ACME_DT
+  type: l3dot1q
+  encapsulation_dot1q_vlan: 3
+  vrf: ACME-DT
+- name: Ethernet1.2
+  peer_type: l3_interface
+  ip_address: 10.0.0.2/31
+  shutdown: false
+  description: LINK_TO_CORE2_ACME_GENERAL
+  type: l3dot1q
+  encapsulation_dot1q_vlan: 2
+  vrf: ACME-GENERAL
+- name: Ethernet2.2
+  peer_type: l3_interface
+  ip_address: 10.0.0.4/31
+  shutdown: false
+  description: LINK_TO_CORE3_ACME_GENERAL
+  type: l3dot1q
+  encapsulation_dot1q_vlan: 2
+  vrf: ACME-GENERAL
+- name: Ethernet3.2
+  peer_type: l3_interface
+  ip_address: 10.0.0.6/31
+  shutdown: false
+  description: LINK_TO_CORE3_ACME_GENERAL
+  type: l3dot1q
+  encapsulation_dot1q_vlan: 2
+  vrf: ACME-GENERAL
+- name: Ethernet4
+  peer: server01
+  peer_interface: Ethernet1
+  peer_type: server
+  vlans: 40
+  description: server01_Ethernet1
+  shutdown: false
+  type: switched
+  mode: access
+- name: Ethernet5
+  peer: server07
+  peer_interface: Ethernet1
+  peer_type: server
+  vlans: 50
+  description: server07_Ethernet1
+  shutdown: false
+  type: switched
+  mode: access

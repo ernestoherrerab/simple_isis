@@ -1,0 +1,83 @@
+---
+cvp_devices:
+  - fqdn: core1
+    parentContainerName: core
+    configlets:
+      - acme_core1
+  - fqdn: core2
+    parentContainerName: core
+    configlets:
+      - acme_core2
+  - fqdn: core3
+    parentContainerName: core
+    configlets:
+      - acme_core3
+  - fqdn: core4
+    parentContainerName: core
+    configlets:
+      - acme_core4
+  - fqdn: core5
+    parentContainerName: core
+    configlets:
+      - acme_core5
+  - fqdn: core6
+    parentContainerName: core
+    configlets:
+      - acme_core6
+  - fqdn: server01
+    parentContainerName: servers
+    configlets:
+      - acme_server01
+  - fqdn: server02
+    parentContainerName: servers
+    configlets:
+      - acme_server02
+  - fqdn: server03
+    parentContainerName: servers
+    configlets:
+      - acme_server03
+  - fqdn: server04
+    parentContainerName: servers
+    configlets:
+      - acme_server04
+  - fqdn: server05
+    parentContainerName: servers
+    configlets:
+      - acme_server05
+  - fqdn: server06
+    parentContainerName: servers
+    configlets:
+      - acme_server06
+  - fqdn: server07
+    parentContainerName: servers
+    configlets:
+      - acme_server07
+  - fqdn: server08
+    parentContainerName: servers
+    configlets:
+      - acme_server08
+  - fqdn: server09
+    parentContainerName: servers
+    configlets:
+      - acme_server09
+  - fqdn: server10
+    parentContainerName: servers
+    configlets:
+      - acme_server10
+  - fqdn: server11
+    parentContainerName: servers
+    configlets:
+      - acme_server11
+  - fqdn: server12
+    parentContainerName: servers
+    configlets:
+      - acme_server12
+cvp_containers:
+  core:
+    parentContainerName: dc01
+  dc01:
+    parentContainerName: isis_fabric
+  isis_fabric:
+    parentContainerName: Tenant
+  servers:
+    parentContainerName: isis_fabric

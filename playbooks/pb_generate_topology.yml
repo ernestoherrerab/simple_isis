@@ -1,0 +1,21 @@
+- name: Build ACT Topology
+  hosts: isis_fabric
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Generate ACT Topology File
+      import_role:
+        name: act-topgen
+      vars:
+          structured_folder: "intended/structured_configs/"
+          act_connected_nodes_map:
+            server: 'veos'
+            firewall: 'veos'
+            load_balancer: 'veos'
+            l3_interface: 'veos'
+            router: 'veos'
+          act_add_cvp: true
+          act_add_ansible_node: false
+          act_add_connected_nodes: true
+          output_filename: "simple-isis-topology.yml"

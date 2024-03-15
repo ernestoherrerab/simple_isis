@@ -1,0 +1,30 @@
+### VRFS ###
+vrfs:
+- name: default
+  ip_routing: false
+- name: ACME-DT
+  ip_routing: true
+- name: ACME-GENERAL
+  ip_routing: true
+
+### VLANS ###
+vlans:
+- id: 40
+  name: ACME_GENERAL
+- id: 50
+  name: ACME_DT
+
+### SVIS ###
+vlan_interfaces:
+- name: Vlan40
+  description: ACME_GENERAL
+  shutdown: false
+  mtu: 1500
+  vrf: ACME-GENERAL
+  ip_address: "{{ hostvars[inventory_hostname].vars.svi_40 }}/24"
+- name: Vlan50
+  description: ACME_DT
+  shutdown: false
+  mtu: 1500
+  vrf: ACME-DT
+  ip_address: "{{ hostvars[inventory_hostname].vars.svi_50 }}/24"

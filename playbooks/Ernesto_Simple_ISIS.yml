@@ -1,0 +1,88 @@
+---
+all:
+  children:
+    CVP:
+      hosts:
+        cv_ztp:
+          ansible_host: 10.18.143.237
+          ansible_user: root
+          ansible_password: cvproot
+        cv_server:
+          ansible_httpapi_host: 10.18.143.237
+          ansible_host: 10.18.143.237
+          ansible_user: cvpadmin
+          ansible_password: cvp123!
+    VEOS:
+      hosts:
+        core1:
+          ansible_host: 10.18.143.239
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        core2:
+          ansible_host: 10.18.143.236
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        core3:
+          ansible_host: 10.18.143.242
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        core4:
+          ansible_host: 10.18.143.230
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        core5:
+          ansible_host: 10.18.143.244
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        core6:
+          ansible_host: 10.18.143.241
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        server01:
+          ansible_host: 10.18.143.234
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        server02:
+          ansible_host: 10.18.143.246
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        server03:
+          ansible_host: 10.18.143.233
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        server04:
+          ansible_host: 10.18.143.238
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        server05:
+          ansible_host: 10.18.143.235
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        server06:
+          ansible_host: 10.18.143.231
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        server07:
+          ansible_host: 10.18.143.232
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        server08:
+          ansible_host: 10.18.143.229
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        server09:
+          ansible_host: 10.18.143.228
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        server10:
+          ansible_host: 10.18.143.240
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        server11:
+          ansible_host: 10.18.143.243
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
+        server12:
+          ansible_host: 10.18.143.245
+          ansible_user: cvpadmin
+          ansible_ssh_pass: arista1234
